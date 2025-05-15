@@ -37,7 +37,7 @@ else
     echo "Unknown BOOTMODE: $BOOTMODE"
     exit 1
 fi
-wget -N https://download.mikrotik.com/routeros/$VIRSION/container-$VIRSION.npk
+# wget -N https://download.mikrotik.com/routeros/$VIRSION/container-$VIRSION.npk
 
 mount -o loop,offset=33571840 chr.img /mnt
 
@@ -60,8 +60,8 @@ EOF
 echo -e -n "\x4d\x32\x01\x00\x00\x29\x0b\x4d\x32\x1c\x00\x00\x01\x0a\x00\x00\x09\x00" > /mnt/rw/rosmode.msg
 
 # packages container
-mkdir -p /mnt/var/pdb/container
-mv -f container-$VIRSION.npk /mnt/var/pdb/container/image
+# mkdir -p /mnt/var/pdb/container
+# mv -f container-$VIRSION.npk /mnt/var/pdb/container/image
 
 umount /mnt
 
