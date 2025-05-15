@@ -32,7 +32,7 @@ get_admin_password
 if [ "$BOOTMODE" = "efi" ]; then
     wget -N https://github.com/elseif/MikroTikPatch/releases/download/$VIRSION/chr-$VIRSION.img.zip && gunzip -c chr-$VIRSION.img.zip > chr.img
 elif [ "$BOOTMODE" = "bios" ]; then
-    wget -N https://github.com/elseif/MikroTikPatch/releases/download/$VIRSION/chr-$VIRSION-legacy-bios.img.zip && gunzip -c chr-$VIRSION.img.zip > chr.img
+    wget -N https://github.com/elseif/MikroTikPatch/releases/download/$VIRSION/chr-$VIRSION-legacy-bios.img.zip && gunzip -c chr-$VIRSION-legacy-bios.img.zip > chr.img
 else
     echo "Unknown BOOTMODE: $BOOTMODE"
     exit 1
