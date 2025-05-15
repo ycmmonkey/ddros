@@ -37,7 +37,6 @@ else
     echo "Unknown BOOTMODE: $BOOTMODE"
     exit 1
 fi
-wget -N https://github.com/elseif/MikroTikPatch/releases/download/$VIRSION/chr-$VIRSION-legacy-bios.img.zip && gunzip -c chr-$VIRSION.img.zip > chr.img
 wget -N https://download.mikrotik.com/routeros/$VIRSION/container-$VIRSION.npk
 
 mount -o loop,offset=33571840 chr.img /mnt
